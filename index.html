@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Primary -->
+    <title>Zehran Ramen - Ramen & Suki Premium | Cita Rasa Jepang Autentik</title>
+    <meta name="description"
+        content="Zehran Ramen menyajikan ramen, suki, bento, dan grill premium dengan cita rasa Jepang autentik. Nikmati pengalaman kuliner terbaik bersama keluarga dan sahabat.">
+    <meta name="keywords"
+        content="ramen, suki, bento, grill, makanan jepang, restoran jepang, zehran ramen, ramen premium, kuliner jepang">
+    <meta name="author" content="Zehran Ramen">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zehranramen.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Zehran Ramen — Ramen & Suki Premium">
+    <meta property="og:description"
+        content="Nikmati ramen, suki, bento, dan grill premium dengan cita rasa Jepang autentik di Zehran Ramen.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200">
+    <meta property="og:url" content="https://zehranramen.com/">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zehran Ramen — Ramen & Suki Premium">
+    <meta name="twitter:description"
+        content="Nikmati ramen, suki, bento, dan grill premium dengan cita rasa Jepang autentik.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Zehran Ramen",
+        "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1200",
+        "url": "https://zehranramen.com",
+        "telephone": "+6281234567890",
+        "servesCuisine": ["Japanese", "Ramen", "Suki"],
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Sakura No. 88",
+            "addressLocality": "Jakarta Selatan",
+            "addressRegion": "DKI Jakarta",
+            "postalCode": "12345",
+            "addressCountry": "ID"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "11:00",
+                "closes": "22:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1240"
+        }
+    }
+    </script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FFF9E6',
+                            100: '#FFF0BF',
+                            200: '#FFE699',
+                            300: '#FFD966',
+                            400: '#E8C547',
+                            500: '#D4A843',
+                            600: '#B8922E',
+                            700: '#8B6F23',
+                            800: '#5E4A17',
+                            900: '#31260C',
+                        },
+                        crimson: {
+                            50: '#FDE8E8',
+                            100: '#F9BFBF',
+                            200: '#F09090',
+                            300: '#E06060',
+                            400: '#C73A3A',
+                            500: '#8B1A1A',
+                            600: '#731515',
+                            700: '#5B1010',
+                            800: '#430B0B',
+                            900: '#2B0707',
+                        },
+                        dark: {
+                            50: '#2A2A2A',
+                            100: '#222222',
+                            200: '#1C1C1C',
+                            300: '#171717',
+                            400: '#131313',
+                            500: '#0F0F0F',
+                            600: '#0C0C0C',
+                            700: '#0A0A0A',
+                            800: '#070707',
+                            900: '#050505',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['"Inter"', 'sans-serif'],
+                        japanese: ['"Noto Serif JP"', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                        'slide-left': 'slideLeft 0.8s ease-out forwards',
+                        'slide-right': 'slideRight 0.8s ease-out forwards',
+                        'shimmer': 'shimmer 3s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(-40px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        slideRight: {
+                            '0%': { opacity: '0', transform: 'translateX(40px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        shimmer: {
+                            '0%, 100%': { backgroundPosition: '200% center' },
+                            '50%': { backgroundPosition: '-200% center' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Noto+Serif+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="font-body bg-dark-700 text-gray-100 transition-colors duration-500">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div
+                        class="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-crimson-500 flex items-center justify-center text-white font-heading font-bold text-lg group-hover:scale-110 transition-transform duration-300">
+                        Z</div>
+                    <span class="font-heading text-xl font-bold text-gold-500 tracking-wide">Zehran<span
+                            class="text-crimson-400">Ramen</span></span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#hero"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors duration-300 relative">Home</a>
+                    <a href="#about"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors duration-300 relative">About</a>
+                    <a href="#menu"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors duration-300 relative">Menu</a>
+                    <a href="#testimonials"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors duration-300 relative">Reviews</a>
+                    <a href="#footer"
+                        class="nav-link text-sm font-medium text-gray-300 hover:text-gold-500 transition-colors duration-300 relative">Kontak</a>
+
+                    <!-- Dark/Light Toggle -->
+                    <button id="theme-toggle"
+                        class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 hover:bg-gold-500/10 transition-all duration-300"
+                        aria-label="Toggle Theme">
+                        <i class="fas fa-sun text-sm" id="theme-icon"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="mobile-toggle"
+                    class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 group"
+                    aria-label="Menu">
+                    <span class="hamburger-line w-6 h-0.5 bg-gold-500 transition-all duration-300"></span>
+                    <span class="hamburger-line w-6 h-0.5 bg-gold-500 transition-all duration-300"></span>
+                    <span
+                        class="hamburger-line w-4 h-0.5 bg-gold-500 transition-all duration-300 group-hover:w-6"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="md:hidden max-h-0 overflow-hidden transition-all duration-500 bg-dark-700/95 backdrop-blur-xl border-t border-gold-500/10">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="#hero"
+                    class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-gold-500 transition-colors">Home</a>
+                <a href="#about"
+                    class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-gold-500 transition-colors">About</a>
+                <a href="#menu"
+                    class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-gold-500 transition-colors">Menu</a>
+                <a href="#testimonials"
+                    class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-gold-500 transition-colors">Reviews</a>
+                <a href="#footer"
+                    class="mobile-nav-link text-lg font-medium text-gray-300 hover:text-gold-500 transition-colors">Kontak</a>
+                <button id="theme-toggle-mobile" class="flex items-center gap-3 text-gold-500 mt-2">
+                    <i class="fas fa-sun"></i>
+                    <span class="text-sm">Ganti Tema</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ========== HERO SECTION ========== -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1920&q=80"
+                    alt="Ramen Jepang premium di Zehran Ramen" class="w-full h-full object-cover" loading="eager">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark-700"></div>
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60"></div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div
+                class="absolute top-20 left-10 w-32 h-32 border border-gold-500/20 rounded-full animate-float hidden lg:block">
+            </div>
+            <div class="absolute bottom-32 right-16 w-20 h-20 border border-crimson-500/20 rounded-full animate-float hidden lg:block"
+                style="animation-delay: 1s;"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <p class="text-gold-500 font-japanese text-lg md:text-xl tracking-[0.3em] mb-4 opacity-0 animate-fade-in"
+                    style="animation-delay: 0.2s;">
+                    ラーメン • すき焼き
+                </p>
+                <h1 class="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 opacity-0 animate-slide-up"
+                    style="animation-delay: 0.4s;">
+                    <span class="text-white">Zehran</span>
+                    <br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600">Ramen</span>
+                </h1>
+                <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed opacity-0 animate-slide-up"
+                    style="animation-delay: 0.6s;">
+                    Nikmati cita rasa ramen Jepang autentik dengan kuah kaldu yang dimasak selama 18 jam, mie handmade,
+                    dan topping premium pilihan. Pengalaman kuliner yang tak terlupakan.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-slide-up"
+                    style="animation-delay: 0.8s;">
+                    <a href="#menu"
+                        class="group relative px-8 py-4 bg-gradient-to-r from-gold-600 to-gold-500 text-dark-700 font-semibold rounded-full overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,168,67,0.4)] hover:scale-105">
+                        <span class="relative z-10 flex items-center gap-2">
+                            <i class="fas fa-utensils"></i>
+                            Lihat Menu
+                        </span>
+                    </a>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Zehran%20Ramen%2C%20apakah%20hari%20ini%20buka%3F%20Saya%20ingin%20reservasi%20meja."
+                        target="_blank" rel="noopener noreferrer"
+                        class="group px-8 py-4 border-2 border-gold-500/50 text-gold-500 font-semibold rounded-full transition-all duration-300 hover:bg-gold-500/10 hover:border-gold-500 hover:shadow-[0_0_30px_rgba(212,168,67,0.2)] hover:scale-105">
+                        <span class="flex items-center gap-2">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            Reservasi via WhatsApp
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========== ABOUT SECTION ========== -->
+        <section id="about" class="py-20 md:py-32 relative overflow-hidden">
+            <!-- Decorative background -->
+            <div
+                class="absolute top-0 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-96 h-96 bg-crimson-500/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <!-- Left: Image -->
+                    <div class="about-reveal opacity-0">
+                        <div class="relative group">
+                            <div
+                                class="absolute -inset-4 bg-gradient-to-br from-gold-500/20 to-crimson-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                            </div>
+                            <div class="relative overflow-hidden rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
+                                    alt="Interior restoran Zehran Ramen dengan suasana hangat"
+                                    class="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                                    loading="lazy">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-700/50 to-transparent"></div>
+                            </div>
+                            <!-- Floating badge -->
+                            <div
+                                class="absolute -bottom-6 -right-6 bg-gradient-to-br from-gold-500 to-gold-600 text-dark-700 px-6 py-4 rounded-xl shadow-2xl animate-float">
+                                <p class="font-heading font-bold text-2xl">5+</p>
+                                <p class="text-xs font-semibold">Tahun Pengalaman</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Text -->
+                    <div class="about-reveal opacity-0 space-y-6">
+                        <div>
+                            <p class="text-gold-500 font-semibold text-sm tracking-[0.2em] uppercase mb-2">Tentang Kami
+                            </p>
+                            <h2
+                                class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                                Cita Rasa Jepang
+                                <span
+                                    class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Autentik</span>
+                            </h2>
+                        </div>
+
+                        <p class="text-gray-400 leading-relaxed text-base md:text-lg">
+                            <strong class="text-gold-500">Zehran Ramen</strong> adalah restoran premium yang
+                            menghadirkan pengalaman kuliner Jepang autentik di Indonesia. Spesialisasi kami adalah
+                            <strong class="text-white">ramen</strong> dengan kuah kaldu tulang yang dimasak selama 18
+                            jam dan <strong class="text-white">suki (shabu-shabu)</strong> dengan bahan-bahan segar
+                            berkualitas tinggi.
+                        </p>
+
+                        <p class="text-gray-400 leading-relaxed text-base md:text-lg">
+                            Didirikan oleh Chef berpengalaman yang telah mendalami seni kuliner Jepang, setiap hidangan
+                            kami disajikan dengan penuh dedikasi dan menggunakan bahan-bahan premium pilihan untuk
+                            memastikan cita rasa terbaik di setiap suapan.
+                        </p>
+
+                        <!-- Info Cards -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                            <div
+                                class="bg-dark-400/50 dark:bg-dark-400/50 border border-gold-500/10 rounded-xl p-5 hover:border-gold-500/30 transition-all duration-300">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-white text-sm">Lokasi</h3>
+                                </div>
+                                <p class="text-gray-400 text-sm">Jl. Sakura No. 88, Jakarta Selatan, DKI Jakarta 12345
+                                </p>
+                            </div>
+                            <div
+                                class="bg-dark-400/50 dark:bg-dark-400/50 border border-gold-500/10 rounded-xl p-5 hover:border-gold-500/30 transition-all duration-300">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-white text-sm">Jam Buka</h3>
+                                </div>
+                                <p class="text-gray-400 text-sm">Setiap hari, 11:00 – 22:00 WIB</p>
+                            </div>
+                            <div
+                                class="bg-dark-400/50 dark:bg-dark-400/50 border border-gold-500/10 rounded-xl p-5 hover:border-gold-500/30 transition-all duration-300">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-white text-sm">Telepon</h3>
+                                </div>
+                                <p class="text-gray-400 text-sm">+62 812-3456-7890</p>
+                            </div>
+                            <div
+                                class="bg-dark-400/50 dark:bg-dark-400/50 border border-gold-500/10 rounded-xl p-5 hover:border-gold-500/30 transition-all duration-300">
+                                <div class="flex items-center gap-3 mb-2">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-gold-500/10 flex items-center justify-center text-gold-500">
+                                        <i class="fas fa-utensils"></i>
+                                    </div>
+                                    <h3 class="font-semibold text-white text-sm">Kapasitas</h3>
+                                </div>
+                                <p class="text-gray-400 text-sm">80 kursi, 10 meja VIP, Private Room</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== MENU SECTION ========== -->
+        <section id="menu" class="py-20 md:py-32 relative bg-dark-800/50">
+            <!-- Decorative -->
+            <div class="absolute top-1/2 left-0 w-64 h-64 bg-crimson-500/5 rounded-full blur-3xl -translate-y-1/2">
+            </div>
+            <div class="absolute top-1/4 right-0 w-64 h-64 bg-gold-500/5 rounded-full blur-3xl"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16 menu-reveal opacity-0">
+                    <p class="text-gold-500 font-semibold text-sm tracking-[0.2em] uppercase mb-2">Menu Kami</p>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Pilihan Menu
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Spesial</span>
+                    </h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Jelajahi ragam hidangan Jepang autentik kami. Setiap
+                        sajian dibuat dari bahan-bahan segar pilihan dengan resep rahasia khas Zehran Ramen.</p>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap justify-center gap-3 mb-12 menu-reveal opacity-0">
+                    <button
+                        class="menu-tab active px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300"
+                        data-category="ramen">
+                        <i class="fas fa-bowl-food mr-2"></i>Ramen
+                    </button>
+                    <button class="menu-tab px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300"
+                        data-category="bento">
+                        <i class="fas fa-box mr-2"></i>Bento
+                    </button>
+                    <button class="menu-tab px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300"
+                        data-category="snack">
+                        <i class="fas fa-cookie-bite mr-2"></i>Snack
+                    </button>
+                    <button class="menu-tab px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300"
+                        data-category="minuman">
+                        <i class="fas fa-mug-hot mr-2"></i>Minuman
+                    </button>
+                    <button class="menu-tab px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300"
+                        data-category="grill">
+                        <i class="fas fa-fire mr-2"></i>Grill
+                    </button>
+                </div>
+
+                <!-- Menu Grid -->
+                <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Items injected by menu.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TESTIMONIALS SECTION ========== -->
+        <section id="testimonials" class="py-20 md:py-32 relative overflow-hidden">
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16 testi-reveal opacity-0">
+                    <p class="text-gold-500 font-semibold text-sm tracking-[0.2em] uppercase mb-2">Testimoni</p>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+                        Apa Kata
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Pelanggan</span>
+                    </h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">Ulasan langsung dari pelanggan setia kami di Google Maps.
+                        Kepuasan Anda adalah prioritas utama kami.</p>
+                    <!-- Rating Badge -->
+                    <div class="flex items-center justify-center gap-3 mt-6">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/1200px-Google_Maps_icon_%282020%29.svg.png"
+                            alt="Google Maps" class="w-8 h-8">
+                        <div class="flex items-center gap-1 text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-stroke"></i>
+                        </div>
+                        <span class="text-white font-bold text-lg">4.8</span>
+                        <span class="text-gray-400 text-sm">(1.240 ulasan)</span>
+                    </div>
+                </div>
+
+                <!-- Testimonials Carousel -->
+                <div class="relative testi-reveal opacity-0">
+                    <div id="testimonial-container" class="overflow-hidden">
+                        <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out">
+                            <!-- Testimonial cards injected by testimonial.js -->
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button id="testi-prev"
+                        class="absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 w-12 h-12 rounded-full bg-dark-400/80 border border-gold-500/20 text-gold-500 flex items-center justify-center hover:bg-gold-500/20 transition-all duration-300 backdrop-blur-md z-10">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="testi-next"
+                        class="absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 w-12 h-12 rounded-full bg-dark-400/80 border border-gold-500/20 text-gold-500 flex items-center justify-center hover:bg-gold-500/20 transition-all duration-300 backdrop-blur-md z-10">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Dots -->
+                    <div id="testi-dots" class="flex justify-center gap-2 mt-8">
+                        <!-- Dots injected by testimonial.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer" class="relative bg-dark-900 border-t border-gold-500/10">
+        <!-- Gold line -->
+        <div class="h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Brand & Socials -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-crimson-500 flex items-center justify-center text-white font-heading font-bold text-xl">
+                            Z</div>
+                        <div>
+                            <h3 class="font-heading text-xl font-bold text-gold-500">Zehran Ramen</h3>
+                            <p class="text-gray-500 text-xs">Ramen & Suki Premium</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">Menghadirkan cita rasa Jepang autentik dengan
+                        bahan-bahan premium sejak 2020. Tempat terbaik untuk menikmati ramen dan suki bersama orang
+                        tersayang.</p>
+
+                    <!-- Social Media -->
+                    <div class="flex items-center gap-4">
+                        <a href="https://instagram.com/zehranramen" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-700 transition-all duration-300"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://x.com/zehranramen" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-700 transition-all duration-300"
+                            aria-label="X (Twitter)">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://tiktok.com/@zehranramen" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-700 transition-all duration-300"
+                            aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://youtube.com/@zehranramen" target="_blank" rel="noopener noreferrer"
+                            class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-dark-700 transition-all duration-300"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+
+                    <!-- WhatsApp CTA -->
+                    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Zehran%20Ramen%2C%20saya%20ingin%20bertanya%20tentang%20menu%20dan%20reservasi."
+                        target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-600 to-green-500 text-white font-semibold rounded-full hover:shadow-[0_0_25px_rgba(34,197,94,0.4)] hover:scale-105 transition-all duration-300">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        WhatsApp Sekarang
+                    </a>
+                </div>
+
+                <!-- Quick Links & Info -->
+                <div class="space-y-6">
+                    <h3 class="font-heading text-lg font-bold text-white">Navigasi Cepat</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#hero"
+                                class="text-gray-400 hover:text-gold-500 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-xs text-gold-500/50"></i>Home</a></li>
+                        <li><a href="#about"
+                                class="text-gray-400 hover:text-gold-500 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-xs text-gold-500/50"></i>Tentang Kami</a></li>
+                        <li><a href="#menu"
+                                class="text-gray-400 hover:text-gold-500 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-xs text-gold-500/50"></i>Menu</a></li>
+                        <li><a href="#testimonials"
+                                class="text-gray-400 hover:text-gold-500 transition-colors text-sm flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-xs text-gold-500/50"></i>Testimoni</a></li>
+                    </ul>
+                    <div class="space-y-3 pt-4 border-t border-gold-500/10">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-gold-500 mt-1"></i>
+                            <p class="text-gray-400 text-sm">Jl. Sakura No. 88, Jakarta Selatan, DKI Jakarta 12345</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone text-gold-500"></i>
+                            <p class="text-gray-400 text-sm">+62 812-3456-7890</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-clock text-gold-500"></i>
+                            <p class="text-gray-400 text-sm">Buka setiap hari, 11:00 – 22:00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="space-y-4">
+                    <h3 class="font-heading text-lg font-bold text-white">Temukan Kami</h3>
+                    <div class="rounded-xl overflow-hidden border border-gold-500/10 h-[280px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0662372940963!2d106.82496867499026!3d-6.260706993730694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e0e5af7a27%3A0x895f05ecac46d7c4!2sJl.%20Sakura%2C%20Jakarta%20Selatan!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" title="Lokasi Zehran Ramen di Google Maps">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="mt-12 pt-8 border-t border-gold-500/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2026 Zehran Ramen. All rights reserved.</p>
+                <p class="text-gray-600 text-xs">Crafted with <i class="fas fa-heart text-crimson-500"></i> for ramen
+                    lovers</p>
+            </div>
+        </div>
+
+        <!-- Back to Top -->
+        <button id="back-to-top"
+            class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 text-dark-700 shadow-lg flex items-center justify-center opacity-0 translate-y-4 transition-all duration-300 pointer-events-none hover:shadow-[0_0_20px_rgba(212,168,67,0.5)] hover:scale-110 z-50"
+            aria-label="Back to Top">
+            <i class="fas fa-chevron-up font-bold"></i>
+        </button>
+
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Zehran%20Ramen%2C%20apakah%20tersedia%20meja%20untuk%20hari%20ini%3F"
+            target="_blank" rel="noopener noreferrer"
+            class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-green-500 text-white shadow-lg flex items-center justify-center hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] hover:scale-110 transition-all duration-300 z-50 animate-float"
+            aria-label="Chat WhatsApp">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/navbar.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/testimonial.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>

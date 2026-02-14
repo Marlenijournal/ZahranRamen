@@ -1,0 +1,456 @@
+/* =============================================
+   ZEHRAN RAMEN — Custom Styles
+   ============================================= */
+
+/* ---------- CSS Variables ---------- */
+:root {
+    --gold: #D4A843;
+    --gold-light: #E8C547;
+    --gold-dark: #8B6F23;
+    --crimson: #8B1A1A;
+    --crimson-light: #C73A3A;
+    --dark-bg: #0A0A0A;
+    --dark-surface: #131313;
+    --dark-card: #1C1C1C;
+    --light-bg: #FAFAF8;
+    --light-surface: #FFFFFF;
+    --light-card: #F5F5F0;
+    --transition: 0.3s ease;
+}
+
+/* ---------- Base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: rgba(212, 168, 67, 0.3);
+    color: #fff;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--gold), var(--crimson));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+/* ---------- Light Mode Overrides ---------- */
+html:not(.dark) body {
+    background-color: var(--light-bg);
+    color: #1a1a1a;
+}
+
+html:not(.dark) #navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+html:not(.dark) .nav-link,
+html:not(.dark) .mobile-nav-link {
+    color: #444;
+}
+
+html:not(.dark) .nav-link:hover,
+html:not(.dark) .mobile-nav-link:hover {
+    color: var(--gold-dark);
+}
+
+html:not(.dark) #mobile-menu {
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+html:not(.dark) .menu-tab {
+    background-color: #f0ede6;
+    color: #666;
+}
+
+html:not(.dark) .menu-tab.active {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #fff;
+}
+
+html:not(.dark) .menu-card {
+    background-color: var(--light-card);
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+html:not(.dark) .menu-card:hover {
+    border-color: rgba(212, 168, 67, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+html:not(.dark) .testi-card {
+    background-color: var(--light-card);
+    border-color: rgba(0, 0, 0, 0.06);
+}
+
+html:not(.dark) .bg-dark-400\/50 {
+    background-color: rgba(245, 245, 240, 0.8) !important;
+}
+
+html:not(.dark) footer {
+    background-color: #1C1C1C !important;
+}
+
+html:not(.dark) ::-webkit-scrollbar-track {
+    background: var(--light-bg);
+}
+
+html:not(.dark) h2,
+html:not(.dark) h3 {
+    color: #1a1a1a;
+}
+
+html:not(.dark) .about-reveal p.text-gray-400 {
+    color: #555;
+}
+
+/* ---------- Navbar ---------- */
+#navbar {
+    background: transparent;
+}
+
+#navbar.scrolled {
+    background-color: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(212, 168, 67, 0.08);
+}
+
+/* Nav link underline animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), var(--crimson));
+    border-radius: 2px;
+    transition: width var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Mobile hamburger animation */
+#mobile-toggle.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+
+#mobile-toggle.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-toggle.active .hamburger-line:nth-child(3) {
+    width: 1.5rem;
+    transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* ---------- Hero ---------- */
+#hero .hero-parallax {
+    transition: transform 0.1s linear;
+}
+
+/* ---------- Menu ---------- */
+.menu-tab {
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #999;
+    border: 1px solid rgba(212, 168, 67, 0.1);
+}
+
+.menu-tab:hover {
+    background-color: rgba(212, 168, 67, 0.1);
+    color: var(--gold);
+    border-color: rgba(212, 168, 67, 0.3);
+}
+
+.menu-tab.active {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--dark-bg);
+    border-color: transparent;
+    box-shadow: 0 4px 20px rgba(212, 168, 67, 0.3);
+}
+
+/* Menu Cards */
+.menu-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(212, 168, 67, 0.08);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(212, 168, 67, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(212, 168, 67, 0.08);
+}
+
+.menu-card .card-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.menu-card .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.menu-card .card-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, var(--dark-card), transparent);
+    pointer-events: none;
+}
+
+html:not(.dark) .menu-card .card-image::after {
+    background: linear-gradient(to top, var(--light-card), transparent);
+}
+
+.menu-card .card-body {
+    padding: 1.25rem;
+}
+
+.menu-card .card-body h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+html:not(.dark) .menu-card .card-body h3 {
+    color: #1a1a1a;
+}
+
+.menu-card .card-body p {
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.menu-card .card-price {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--gold);
+}
+
+/* Menu card entrance animation */
+.menu-card {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.menu-card.visible {
+    animation: menuCardIn 0.5s ease forwards;
+}
+
+@keyframes menuCardIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Testimonials ---------- */
+.testi-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(212, 168, 67, 0.08);
+    border-radius: 1rem;
+    padding: 2rem;
+    min-width: 100%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .testi-card {
+        min-width: calc(50% - 0.75rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .testi-card {
+        min-width: calc(33.333% - 1rem);
+    }
+}
+
+.testi-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    color: rgba(212, 168, 67, 0.1);
+    line-height: 1;
+}
+
+.testi-card .stars {
+    color: #FACC15;
+    margin-bottom: 1rem;
+}
+
+.testi-card .review-text {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+html:not(.dark) .testi-card .review-text {
+    color: #555;
+}
+
+.testi-card .reviewer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.testi-card .reviewer img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(212, 168, 67, 0.3);
+}
+
+.testi-card .reviewer-name {
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+html:not(.dark) .testi-card .reviewer-name {
+    color: #1a1a1a;
+}
+
+.testi-card .reviewer-meta {
+    font-size: 0.8rem;
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Testimonial dots */
+.testi-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(212, 168, 67, 0.2);
+    cursor: pointer;
+    transition: all var(--transition);
+}
+
+.testi-dot.active {
+    background: var(--gold);
+    width: 28px;
+    border-radius: 5px;
+}
+
+/* ---------- Back to Top ---------- */
+#back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+/* ---------- Reveal Animations ---------- */
+.about-reveal,
+.menu-reveal,
+.testi-reveal {
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.about-reveal.revealed {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.menu-reveal.revealed,
+.testi-reveal.revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+    #hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .menu-card .card-image {
+        height: 180px;
+    }
+
+    .testi-card {
+        padding: 1.5rem;
+    }
+
+    #testi-prev,
+    #testi-next {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ---------- Utility ---------- */
+.text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.glass {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 168, 67, 0.1);
+}
